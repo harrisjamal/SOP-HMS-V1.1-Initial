@@ -1,0 +1,284 @@
+#include <iostream>
+#include <string>
+#include <stdexcept>
+using namespace std;
+                            // Main Hostel Menu Interface
+class Hostel {
+    public:
+    Hostel();
+                            // Student Menu Interface
+    void sMenu();
+    // void addStudent();
+    // void updateStudent();
+    // void deleteStudent();
+    // void searchStudent();
+    // void displayStudent();
+                            // Attendance Menu Interface
+    void aMenu();
+    // void markAttendance();
+    // void showAttendance();
+                            // Staff Menu Interface
+    void staffMenu();
+    // void addStaff();
+    // void updateSalary();
+    // void deleteStaff();
+    // void showAllStaffList();
+
+                            // Room Allocation Interface
+    void rMenu();
+    // void showRoomList();
+    // void allocateRoom();
+    // void deAllocateRoom();
+    // void showBookedRoom();
+
+                            // Fee And Account Interface
+    void faMenu();
+    // void roomType();
+    // void totalFeeInvoice();
+    // void securityDeposit();
+    // void securityWithdraw();
+    // void finesNLate();
+                            // Complaint Management Interface
+    void cMenu();
+    // void addComplaint();
+    // void updateComplaint();
+    // void deleteComplaint();
+    // void showComplaint();
+    // void complaintStatus();
+};
+Hostel::Hostel() {
+    int choice;
+    start2:
+    cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t----------------------------------------------------------" << endl;
+    cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tHOSTEL MANAGEMENT SYSTEM" << endl;
+    cout << "\t\t\t\t\t\t\t\t\t\t\t\t\t----------------------------------------------------------" << endl;
+    cout << "1- Student Management. " << endl;
+    cout << "2- Attendance Management. " << endl;
+    cout << "3- Room Allocation. " << endl;
+    cout << "4- Staff Management. " << endl;
+    cout << "5- Fee and Accounts. " << endl;
+    cout << "6- Complaint Management. " << endl;
+    cout << "7- Exit. " << endl;
+    cout << "Enter The Choice : ";
+    cin >> choice;
+    if(choice == 1) {
+        sMenu();
+    }
+    else if(choice == 2) {
+        aMenu();
+    }
+    else if(choice == 3) {
+        rMenu();
+    }
+    else if(choice == 4) {
+        staffMenu();
+    }
+    else if(choice == 5) {
+        faMenu();
+    }
+    else if(choice == 6) {
+        cMenu();
+    }
+    else {
+        cout << "------------------Program Terminated Successfully------------------" << endl;
+    }
+}
+void Hostel::sMenu() {
+    int choice;
+    cout << "\t\t\t\t\t\t\t\t\t-------------------------" << endl;
+    cout << "\t\t\t\t\t\t\t\t\tSTUDENT MANAGEMENT SYSTEM" << endl;
+    cout << "\t\t\t\t\t\t\t\t\t-------------------------" << endl;
+    cout << "1- Add Student. " << endl;
+    cout << "2- Update Student. " << endl;
+    cout << "3- Delete Student. " << endl;
+    cout << "4- Search Student. " << endl;
+    cout << "5- Display Student. " << endl;
+    cout << "6- Exit. " << endl;
+    cout << "Enter The Choice : ";
+    cin >> choice;
+    if(choice == 1) {
+        void Student :: setStudentDetails();
+    }
+    // else if(choice == 2) {
+    //     updateStudent();
+    // }
+    // else if(choice == 3) {
+    //     deleteStudent();
+    // }
+    // else if(choice == 4) {
+    //     searchStudent();
+    // }
+    // else if(choice == 5) {
+    //     displayStudent();
+    // }
+    else {
+        cout << "------------------Program Terminated Successfully---------------" << endl;
+    }
+}
+void Hostel::aMenu() {
+    int choice;
+    cout << "\t\t\t\t\t\t\t\t\t----------------------------" << endl;
+    cout << "\t\t\t\t\t\t\t\t\tATTENDANCE MANAGEMENT SYSTEM" << endl;
+    cout << "\t\t\t\t\t\t\t\t\t----------------------------" << endl;
+    cout << "1- Mark Attendance. " << endl;
+    cout << "2- Show Attendance. " << endl;
+    cout << "3- Exit. " << endl;
+    cout << "Enter The Choice : ";
+    cin >> choice;
+
+}
+void Hostel::staffMenu() {
+    int choice;
+    cout << "\t\t\t\t\t\t\t\t\t-----------------------" << endl;
+    cout << "\t\t\t\t\t\t\t\t\tSTAFF MANAGEMENT SYSTEM" << endl;
+    cout << "\t\t\t\t\t\t\t\t\t-----------------------" << endl;
+    cout << "1- Add Staff Members. " << endl;
+    cout << "2- Update Salary. " << endl;
+    cout << "3- Delete Staff. " << endl;
+    cout << "4- Show All Staff List. " << endl;
+    cout << "5- Exit. " << endl;
+    cout << "Enter The Choice : ";
+    cin >> choice;
+}
+void Hostel::rMenu() {
+    int choice;
+    cout << "\t\t\t\t\t\t\t\t\t----------------------" << endl;
+    cout << "\t\t\t\t\t\t\t\t\tROOM ALLOCATION SYSTEM" << endl;
+    cout << "\t\t\t\t\t\t\t\t\t----------------------" << endl;
+    cout << "1- Show Available Rooms List. " << endl;
+    cout << "2- Allocate Room. " << endl;
+    cout << "3- Deallocate Room. " << endl;
+    cout << "4- Show Booked Rooms List. " << endl;
+    cout << "5- Exit. " << endl;
+    cout << "Enter The Choice : ";
+    cin >> choice;
+}
+void Hostel::faMenu() {
+    int choice;
+    cout << "\t\t\t\t\t\t\t\t\t----------------------" << endl;
+    cout << "\t\t\t\t\t\t\t\t\tFEE AND ACCOUNT SYSTEM" << endl;
+    cout << "\t\t\t\t\t\t\t\t\t----------------------" << endl;
+    cout << "1- Room Type. " << endl;
+    cout << "2- Total Fee Invoice. " << endl;
+    cout << "3- Security Deposit. " << endl;
+    cout << "4- Security Withdraw. " << endl;
+    cout << "5- Fines and Late Payments. " << endl;
+    cout << "6- Exit. " << endl;
+    cout << "Enter The Choice : ";
+    cin >> choice;
+}
+
+void Hostel::cMenu() {
+    int choice;
+    cout << "\t\t\t\t\t\t\t\t\t---------------------------" << endl;
+    cout << "\t\t\t\t\t\t\t\t\tCOMPLAINT MANAGEMENT SYSTEM" << endl;
+    cout << "\t\t\t\t\t\t\t\t\t---------------------------" << endl;
+    cout << "1- Add Complaint. " << endl;
+    cout << "2- Remove Complaint. " << endl;
+    cout << "3- Show Complaint. " << endl;
+    cout << "4- Update Complaint. " << endl;
+    cout << "5- Display Complaints By Status. " << endl;
+    cout << "6- Exit. " << endl;
+    cout << "Enter The Choice : ";
+    cin >> choice;
+}
+                            //Functionalities of Student Management Modules Starts from here;
+class Student{
+    private:
+    string firstName;
+    string lastName;
+    string gender;
+    int ID;
+    bool roomDesginated;
+    int studentCount;
+public:
+                                //Student Details Input For Addition Module;
+    Student();
+    void setStudentDetails();
+    string getfirstname();
+    string getlastname();
+    string getgender();
+    int getID();
+    void showEnteredDetails();
+
+
+};
+Student::Student() {
+    firstName = "";
+    lastName = "";
+    gender = "";
+    ID = 0;
+    roomDesginated = false;
+    studentCount = 0;
+}
+void Student::setStudentDetails() {
+    string fName, lName, gnD;
+    int id;
+    cout << "Enter your First Name: ";
+    cin >> fName;
+    cout << "Enter your Last Name: ";
+    cin >> lName;
+    cout << "Enter your Gender: ";
+    cin >> gnD;
+    cout << "Enter your ID: ";
+    cin >> id;
+    firstName = fName;
+    lastName = lName;
+    gender = gnD;
+    ID = id;
+    showEnteredDetails();
+}
+string Student::getfirstname() {
+    return firstName;
+}
+string Student::getlastname() {
+    return lastName;
+}
+string Student::getgender() {
+    return gender;
+}
+int Student::getID() {
+    return ID;
+}
+void Student::showEnteredDetails() {
+    string ans1, ans2;
+    start1:
+    cout << "Name: " << firstName << " " << lastName<< endl;
+    cout << "Gender: " << gender << endl;
+    cout << "ID: " << ID << endl;
+    cout << "Do you want to assign student " << firstName << " " << lastName << " " << ID << " " << "a room?" << endl;
+    cin >> ans1;
+    if (ans1 == "Yes" || ans1 == "yes" || ans1 == "YES") {
+        roomDesginated = true;
+        cout << "--------------Room Assigned Successfully!--------------" << endl;
+        studentCount++;
+
+    }
+    else {
+        cout << "--------------Room Not Assigned!--------------" << endl;
+    }
+    cout << "Do you want an another Student: " << endl;
+    cin >> ans2;
+    if (ans2 == "Yes" || ans2 == "yes" || ans2 == "YES") {
+        goto start1;
+    }
+    else {
+        cout << "--------------Student Addition Mode Closed Successfully!--------------" << endl;
+    }
+
+}
+
+
+int main() {
+    Hostel hostel;
+    Student sDetails;
+    hostel.sMenu();
+    hostel.staffMenu();
+    hostel.rMenu();
+    hostel.faMenu();
+    hostel.cMenu();
+
+    // sDetails.setStudentDetails();
+    // sDetails.showEnteredDetails();
+    return 0;
+}
